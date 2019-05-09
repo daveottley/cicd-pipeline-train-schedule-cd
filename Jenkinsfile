@@ -29,7 +29,8 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: '{ false; echo "success";\
+                                        execCommand: '{ echo success;\
+                                                        false;\
                                                       }'
                                     )
                                 ]
