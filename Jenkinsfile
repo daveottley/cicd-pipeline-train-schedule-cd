@@ -29,10 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: '{ ps ax | grep node | awk \'{print $1}\' | xargs -n1 kill -9; \
-                                                        cd /opt/train-schedule; \
-                                                        node bin/www; \
-                                                      }'
+                                        execCommand: '{ ps ax | grep node | awk \'{print $1}\' | xargs -n1 kill -9; cd /opt/train-schedule; node bin/www; }'
                                     )
                                 ]
                             )
