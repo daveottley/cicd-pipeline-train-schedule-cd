@@ -31,7 +31,7 @@ pipeline {
                                         remoteDirectory: '/tmp',
                                         execCommand: '{ ps ax | grep node | awk \'{print $1}\' | xargs -n1 kill -9; \
                                                         rm -rf /opt/train-schedule/*; \
-                                                        unzip /tmp/trainSchedule.zip -d /opt/train-schedule; \
+                                                        unzip ~/tmp/trainSchedule.zip -d /opt/train-schedule; \
                                                         cd /opt/train-schedule; \
                                                         node bin/www; \
                                                       }'
